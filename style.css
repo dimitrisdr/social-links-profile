@@ -1,0 +1,123 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+:root {
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey-700: hsl(0, 0%, 20%);
+    --Grey-800: hsl(0, 0%, 12%);
+    --Grey-900: hsl(0, 0%, 8%);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'InterTest';
+    src:local('Inter Regular'), 
+    url('assets/fonts/Inter-VariableFont_slnt,wght.ttf');
+    font-weight: regular;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src:local('Inter Bold'),
+    url('assets/fonts/Inter-VariableFont_slnt,wght.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src:local('Inter Bolder'), 
+    url('assets/fonts/Inter-VariableFont_slnt,wght.ttf');
+    font-weight: 700;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    background-color: var(--Grey-900);
+    color: var(--White);
+    font-family: Inter;
+}
+
+.wraper {
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+    background-color: var(--Grey-800);
+    justify-items: center;
+    font-size: 0.875rem;
+    border-radius: 8px;
+}
+
+.img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.titles-container {
+    text-align: center;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.name {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.author-info {
+    color: var(--Green);
+    font-weight: 500;
+}
+
+.main-content, .option-items {
+    display: grid;
+    gap: 1rem;
+}
+
+.option-item {
+    padding-block: 0.8rem;
+    background-color: var(--Grey-700);
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.option-item:hover {
+    background-color: var(--Green);
+    color: var(--Grey-900);
+}
+
+@media screen and (max-width:375px) {
+    .wraper {
+        width: calc(100% - 2rem);
+    }
+
+    .main-content-title {
+        text-align: center;
+    }
+}
+
+.attribution {
+    padding: 1rem;
+    font-size: 0.725rem;
+}
+
+.attribution a {
+    text-decoration: underline;
+    color: var(--Green);
+}

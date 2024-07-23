@@ -59,6 +59,7 @@ body {
     justify-items: center;
     font-size: 0.875rem;
     border-radius: 8px;
+    margin-block: 2rem;
 }
 
 .img {
@@ -87,6 +88,10 @@ body {
     gap: 1rem;
 }
 
+.main-content-title {
+    text-align: center;
+}
+
 .option-item {
     padding-block: 0.8rem;
     background-color: var(--Grey-700);
@@ -104,17 +109,16 @@ body {
 
 @media screen and (max-width:375px) {
     .wraper {
-        width: calc(100% - 2rem);
+        width: calc(100% - 1rem);
+        padding: 1rem;
     }
 
-    .main-content-title {
-        text-align: center;
-    }
 }
 
 .attribution {
     padding: 1rem;
     font-size: 0.725rem;
+    text-align: center;
 }
 
 .attribution a {
